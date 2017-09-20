@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export const VerticalMenu = ({items, itemPath, staticMenuItems}) => (
   <nav>
@@ -8,14 +8,14 @@ export const VerticalMenu = ({items, itemPath, staticMenuItems}) => (
       {
         staticMenuItems ?
         staticMenuItems.map((item) => (
-          <NavLink
+          <Link
             to={`${item.path}`}
             activeClassName='active'
             className='menu_item'
             key={item.id}
           >
             {item.title}
-          </NavLink>
+          </Link>
         ))
         :
         ''
