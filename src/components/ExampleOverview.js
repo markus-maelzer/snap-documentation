@@ -11,6 +11,7 @@ export const ExampleOverview = (props) => {
             var iframeLink = item.link[0]+ '/image/small.png';
             return (
               <div className="f_item" key={i}>
+                <h3>{item.title[0]}</h3>
                 <div className="image_wrapper">
                   <img
                     className="overview_frame"
@@ -18,7 +19,7 @@ export const ExampleOverview = (props) => {
                     src={iframeLink}
                   />
                 </div>
-                <h3>{item.title[0]}</h3>
+
               </div>
             )
           })
